@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransitionActivity"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:id="@+id/textViews">
+        <AutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/actvLocation"
+            android:hint="Select Parking Location"
+            android:completionThreshold="1"/>
+        <AutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/actvPermit"
+            android:hint="Select Permit Type"
+            app:layout_constraintRight_toRightOf="@+id/actvLocation"
+            android:completionThreshold="1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="Find Parking"
+        android:layout_alignBottom="@id/textViews"
+        android:onClick="onFindParking"
+        android:layout_marginLeft="125dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btSearch"
+        android:id="@+id/lvSpots"
+        android:divider="#000000"
+        android:dividerHeight="1dp"
+        android:listSelector="#d3d3d3">
+    </ListView>
+
+
+</RelativeLayout>
+
+

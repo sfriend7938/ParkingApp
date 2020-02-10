@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ParkingApp</string>
+    
+    <string-array name="destinationAddresses">
+        <item>Enter your destination:</item>
+        <item>Roble Parking Garage</item>
+        <item>Wilbur Parking Garage</item>
+        <item>Mirrilees Parking Lot</item>
+    </string-array>
+</resources>
